@@ -1,1404 +1,371 @@
 {% load static %}
-
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CVIT - Multipurpose Personal vCard / CV / Resume Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700,800" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom-style.css' %}" rel="stylesheet">
+    <!--[if lt IE 9]> <script src="{% static 'js/html5shiv.min.js' %}"></script> <script src="{% static 'js/respond.min.js' %}"></script><![endif]-->
+</head>
 
-        <title>Desmond Resume Template</title>
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
+    <div class="wrapper">
+        <div id="preloader">
+            <div class="preloader--bounce">
+                <div class="preloader-bouncer--1"></div>
+                <div class="preloader-bouncer--2"></div>
+            </div>
+        </div>
+        <div id="header">
+            <nav class="header--navbar">
+                <div class="container">
+                    <div class="navbar">
+                        <div class="navbar-header">
+                            <div class="header--custom-btn hidden-lg hidden-md"> <a href="#hireMeModal"
+                                    class="btn--default" data-toggle="modal"><i class="fa fa-user-plus"></i></a> </div>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#headerNav" aria-expanded="false" aria-controls="headerNav"> <span
+                                    class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                                    class="icon-bar"></span> <span class="icon-bar"></span> </button> <a
+                                class="logo navbar-brand" href="#">
+                                <div class="logo--img"> <img src="{% static 'img/logo.png' %}" class="img-responsive"
+                                        alt=""> </div>
+                                <div class="logo--content">
+                                    <h1>MOHAMAD HOSSEIN <strong>ASGARISN</strong></h1>
+                                    <p><strong>BACKEND</strong> DEVELOPMENT</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="header--custom-btn hidden-sm hidden-xs"> <a href="#hireMeModal" class="btn--default"
+                                data-toggle="modal">HIRE ME</a> </div>
+                        <div id="headerNav" class="header--nav navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right AnimateScroll">
+                                <li><a href="#banner">HOME</a></li>
+                                <li><a href="#about">ABOUT</a></li>
+                                <li><a href="#services">SERVICES</a></li>
+                                <li><a href="#gallery">WORKS</a></li>
+                                <li><a href="#feedback">FEEDBACK</a></li>
+                                <li><a href="#blog">BLOG</a></li>
+                                <li><a href="#contact">CONTACT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="banner" data-parallax-bg-img="{% static 'img/banner-bg.jpg' %}" data-position-y="0px">
+            <div class="container">
+                <div class="vc--parent">
+                    <div class="vc--child">
+                        <div class="banner--content">
+                            <h2>Hi I'm <span class="thick"></span> mohamad hossein <span class="thick"></span>
+                                asgarian</h2>
+                            <p>a Computer Engineering student. </strong></a>. I’m passionate about Artificial
+                                Intelligence, Machine Learning, and Backend Development, and I’m always eager to learn
+                                and work on new projects My goal is to combine academic knowledge with practical
+                                experience to build innovative and impactful solutions in the tech world</p><a
+                                href="#contact" class="btn--default AnimateScrollLink">LET'S TALK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="section--title">
+                    <h2><strong>ABOUT ME</strong></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3><strong></strong></h3>
+                        <p>I am MohammadHossein Asgarian, a Computer Engineering student with a strong passion for
+                            Artificial Intelligence, Machine Learning, and Backend Development.
+                            During my studies, I have gained a solid foundation in programming (Python, C++, and more)
+                            and have worked on several projects that helped me strengthen my problem-solving and
+                            analytical skills.</p>
+                        <p>I am highly motivated to grow both academically and professionally, with a particular
+                            interest in applying AI to real-world problems.
+                            My long-term goal is to continue my studies abroad, especially in Germany, and contribute to
+                            the field of Artificial Intelligence through both research and practical applications.
 
-        <meta name="description" content="">
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-        <!-- Google Font: Lato -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-        <!-- FontAwesome -->
-        <link rel="stylesheet" href="{% static 'plugins/font-awesome/css/fontawesome.min.css' %}">
-        <link rel="stylesheet" href="{% static 'plugins/font-awesome/css/brands.min.css' %}">
-
-        <!-- Nivo Lightbox-->
-        <link rel="stylesheet" href="{% static 'plugins/nivo-lightbox/nivo-lightbox.css' %}" />
-        <link rel="stylesheet" href="{% static 'plugins/nivo-lightbox/themes/default/default.css' %}" />
-
-        <!-- Main CSS -->
-        <link rel="stylesheet" href="{% static 'css/main.css' %}">
-        
-        <!-- Themes -->
-        <!--<link rel="stylesheet" href="{% static 'css/themes.light.css' %}">-->
-        <link rel="stylesheet" href="{% static 'css/themes.dark.css' %}">
-        
-        <!-- Custom CSS -->
-        <!--<link rel="stylesheet" href="{% static 'css/custom.css' %}">-->
-
-        <!-- jQuery -->
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-
-        <!-- dense.js' %} (Retina plugin) -->
-        <script src="{% static 'js/dense.js' %}"></script>
-
-        <!-- Nivo Lightbox -->
-        <script src="{% static 'plugins/nivo-lightbox/nivo-lightbox.min.js' %}"></script>
-
-        <!-- ScrollReveal -->
-        <script src="{% static 'js/scrollreveal.min.js' %}"></script>
-
-        <!-- Main JS -->
-        <script src="{% static 'js/main.js' %}"></script>
-
-    </head>
-
-    <body>
-
-        <div class="c-preloader  js-preloader">
-            <div class="c-preloader__spinner  t-preloader__spinner"></div>
+                            Beyond academics, I enjoy continuous self-learning, teamwork, and exploring innovative
+                            technologies that shape the future.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>EXPERT <strong>IN</strong></h3>
+                        <p>I specialize in Python programming, Backend Development with Django, and have a strong
+                            interest in Artificial Intelligence and Machine Learning.</p>
+                        <div class="about--progress-items">
+                            <h4>DJANGO</h4>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="70"><span>70%</span></div>
+                            </div>
+                            <h4>DJANGO REST FRAMEWORK</h4>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="60"><span>60%</span></div>
+                            </div>
+                            <h4>PYTHON</h4>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="90"><span>90%</span></div>
+                            </div>
+                            <h4>GIT HUB</h4>
+                            <div class="progress">
+                                <div class="progress-bar" data-progress="50"><span>50%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about--info">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="about--info-wrapper">
+                                <h3><strong>EDU</strong>CATION</h3>
+                                <div class="about--info-item">
+                                    <div class="row reset-gutter">
+                                        <div class="col-xs-4">
+                                            <p>2024</p>
+                                            <h5><strong>Education</strong></h5>
+                                        </div>
+                                        <div class="col-xs-8 about--info-border">
+                                            <h4><strong>Computer</strong> Engineering</h4>
+                                            <p>Bachelor of Computer Engineering
+                                                Islamic Azad University, Yadegar-e-Emam Branch</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about--info-wrapper">
+                                <h3><strong>EX</strong>PERIENCE</h3>
+                                <div class="about--info-item">
+                                    <div class="row reset-gutter">
+                                        <div class="col-xs-4">
+                                            <p>2025</p>
+                                            <h5><strong>INTERN</strong></h5>
+                                        </div>
+                                        <div class="col-xs-8 about--info-border">
+                                            <h4><strong>BACKEND</strong> DEVELOPER</h4>
+                                            <p>Gained hands-on experience in laboratory tasks, data management, and
+                                                collaborative work, while strengthening problem-solving and technical
+                                                skills.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about--info-item">
+                                    <div class="row reset-gutter">
+                                        <div class="col-xs-4">
+                                            <p>2025</p>
+                                            <h5><strong>Backend Developer</strong></h5>
+                                        </div>
+                                        <div class="col-xs-8 about--info-border">
+                                            <h4><strong>Student</strong> Projects</h4>
+                                            <p>Worked on several projects using Python, Django, and REST APIs, focusing
+                                                on problem-solving, database design, and clean code practices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about--info-item">
+                                    <div class="row reset-gutter">
+                                        <div class="col-xs-4">
+                                            <p>2025</p>
+                                            <h5><strong>AI & Machine Learning</strong></h5>
+                                        </div>
+                                        <div class="col-xs-8 about--info-border">
+                                            <h4><strong>AI & Machine Learning</strong> Enthusiast</h4>
+                                            <p>Completed hands-on exercises and small projects in Python to strengthen
+                                                understanding of algorithms and data structures, with a growing interest
+                                                in applying ML to real-world problems.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="services" class="bg--overlay" data-parallax-bg-img="{% static 'img/services-bg.jpg' %}">
+        </div>
+        <div id="feedback" data-parallax-bg-img="{% static 'img/feedback-bg.jpg' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 feedback--items">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contact--address">
+                            <h2>CONTACT ADDRESS</h2>
+                            <address>
+                                <p><i class="fa fa-home"></i>IRAN TEHRAN
+                                </p>
+                                <p><i class="fa fa-envelope"></i></p>mohamadasgaryanshad@gmail.com
+                                <p><i class="fa fa-phone"></i>09939125081</p>
+                                <p><i class="fa fa-fax"></i>+1-212-9876543</p>
+                            </address>
+                        </div>
+                        <div class="contact--social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-feed"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="contact--form">
+                            <div class="contact-form-status"></div>
+                            <form action="contact.php" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <input type="text" name="contactName"
+                                                class="form-control" placeholder="Name"> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <input type="email" name="contactEmail"
+                                                class="form-control" placeholder="Email"> </div>
+                                    </div>
+                                </div>
+                                <div class="form-group"> <input type="text" name="contactSubject" class="form-control"
+                                        placeholder="Subject"> </div>
+                                <div class="form-group"> <textarea name="contactMessage" class="form-control" rows="9"
+                                        placeholder="Message"></textarea> </div><input type="submit" value="SEND"
+                                    class="submit-btn btn--primary">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="c-main-container  js-main-container">
-
-
-
-            <!-- ################################ -->
-            <!-- ############ HEADER ############ -->
-            <!-- ################################ -->
-            
-            <section class="o-section o-section--header  t-section  t-section--header">
-                <div class="c-header">
-
-                    <div class="o-section__header-bg  t-section__header"></div>
-                    <div class="o-section__content-bg  t-section__content"></div>
-
-                    <div class="o-container">
-                        <div class="o-section__container">
-
-                            <header class="o-section__header  c-header__header  t-section__header">
-                                <div class="c-header__inner-header">
-
-                                    <div class="c-header__avatar">
-                                        <div class="a-header  c-avatar">
-                                            <img class="c-avatar__img" src="{% static 'header/avatar' %}" alt="">
-                                        </div><!-- /c-avatar -->
-                                    </div><!-- /c-header-avatar -->
-
-                                </div><!-- /c-header__inner-header -->
-                            </header><!-- /o-section__header -->
-
-                            <div class="o-section__content  c-header__content  t-section__content">
-                                <div class="c-header__inner-content">
-
-                                    <div class="c-header__top">
-
-                                        <div class="c-header__brand">
-
-                                            <div class="c-brand">
-                                                <h1 class="c-brand__title  t-title">
-                                                    <span class="c-brand__sizer">
-                                                        <span class="a-header  c-brand__first-word  t-title__first-word">
-                                                            Desmond
-                                                        </span>
-                                                        <span class="a-header  c-brand__second-word  t-title__second-word">
-                                                            Rambowski
-                                                        </span>
-                                                    </span>
-                                                </h1>
-                                                <h2 class="a-header  c-brand__sub-title  t-sub-title">
-                                                    <span class="c-brand__sizer">
-                                                        Web Developer &amp; Front-end Expert
-                                                    </span>
-                                                </h2>
-                                            </div><!-- /c-brand -->
-
-                                        </div><!-- /c-header__brand -->
-
-                                        <ul class="c-header__social-buttons  c-social-buttons">
-                                            <li class="a-header">
-                                                <a href="https://www.facebook.com/RuvenThemes/" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="a-header">
-                                                <a href="https://dribbble.com/" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-dribbble"></i>
-                                                </a>
-                                            </li>
-                                            <li class="a-header">
-                                                <a href="https://twitter.com/_Ruven" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                        </ul><!-- /c-header__social-buttons -->
-
-                                    </div><!-- /c-header__top -->
-
-                                    <div class="c-header__contact">
-
-                                        <hr class="a-header  c-header__contact-divider" />
-
-                                        <div class="o-grid">
-
-                                            <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                                <div class="a-header  o-content">
-                                                    <div class="o-content__body">
-                                                        <h4>Location</h4>
-                                                        <address>
-                                                            Portland, OR
-                                                        </address>
-                                                    </div>
-                                                </div><!-- /o-content -->
-                                            </div><!-- /o-grid__col -->
-
-                                            <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                                <div class="a-header  o-content">
-                                                    <div class="o-content__body">
-                                                        <h4>Phone</h4>
-                                                        <p>
-                                                            534.456.886
-                                                        </p>
-                                                    </div>
-                                                </div><!-- /o-content -->
-                                            </div><!-- /o-grid__col -->
-
-                                            <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                                <div class="a-header  o-content">
-                                                    <div class="o-content__body">
-                                                        <a href="#" target="_blank" class="t-link-container">
-                                                            <h4>Web</h4>
-                                                            <p>
-                                                                <span class="t-link-container__item--blended">
-                                                                    ruventhemes.com
-                                                                </span>
-                                                            </p>
-                                                        </a><!-- /o-link-container -->
-                                                    </div>
-                                                </div><!-- /o-content -->
-                                            </div><!-- /o-grid__col -->
-
-                                            <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                                <div class="a-header  o-content">
-                                                    <div class="o-content__body">
-                                                        <a href="#" target="_blank" class="t-link-container">
-                                                            <h4>Email</h4>
-                                                            <p>
-                                                                <span class="t-link-container__item--blended">
-                                                                    hello@example.com
-                                                                </span>
-                                                            </p>
-                                                        </a><!-- /o-link-container -->
-                                                    </div>
-                                                </div><!-- /o-content -->
-                                            </div><!-- /o-grid__col -->
-
-                                        </div><!-- /o-grid -->
-                                    </div><!-- /c-header__contact -->
-
-                                </div><!-- /c-header__inner-content -->
-                            </div><!-- /o-section__content -->
-
-                        </div><!-- /o-section__container -->
-
-                    </div><!-- /o-container -->
-
-                </div><!-- /c-header -->
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ############ INTRO ############# -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Intro
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    What I am all about.
+        <div id="subscribe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="section--title">
+                            <h2><strong>SUBSCRIBE TO GET MY NEWSLETTER</strong></h2>
+                        </div>
+                        <div class="subscribe--form">
+                            <form
+                                action="http://themelooks.us12.list-manage.com/subscribe/post?u=50e1e21235cbd751ab4c1ebaa&amp;id=ac81d988e4"
+                                method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate">
+                                <input type="text" value="" name="EMAIL" placeholder="Enter your email address"
+                                    class="input-box"> <input type="submit" value="Subscribe"
+                                    class="submit--btn btn--default">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer--copyright">
+                    <p>Copyright &copy; 2017 <a href="#">CVIT</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div id="backToTop"> <a href="#banner" class="btn--default AnimateScrollLink"><i class="fa fa-angle-up"></i></a>
+        </div>
+        <div class="hire-me--modal modal fade" id="hireMeModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header"> <span class="close" data-dismiss="modal">&times;</span>
+                        <h4 class="modal-title">HAVE A PROJECT?</h4>
+                        <p>I’m ready to help you. You just type details below, and/or send us a file.</p>
+                    </div>
+                    <div class="modal-body">
+                        <form action="hire-me.php" method="post" id="popupContactForm">
+                            <div class="row">
+                                <div class="col-md-8 form-controls">
+                                    <div class="row">
+                                        <div class="col-md-6 name"> <input type="text" name="name"
+                                                placeholder="Your Name..." /> </div>
+                                        <div class="col-md-6 email"> <input type="email" name="email"
+                                                placeholder="Please Enter Your Email..." /> </div>
+                                        <div class="col-md-6 project-title"> <input type="text" name="project_title"
+                                                placeholder="Your Project Title..." /> </div>
+                                        <div class="col-md-6 case-category"> <select name="category"
+                                                class="bg-fa-caret-down SelectMenu">
+                                                <option value="">-Select Case Category-</option>
+                                                <option value="example">Example Category</option>
+                                            </select> </div>
+                                        <div class="col-md-6 budget"> <select name="budget"
+                                                class="bg-fa-caret-down SelectMenu">
+                                                <option value="">-Budget-</option>
+                                                <option value="0">0</option>
+                                            </select> </div>
+                                        <div class="col-md-6 date"> <input type="text" name="date"
+                                                class="DatePicker bg-fa-calender" placeholder="-Estimate Date-" />
+                                        </div>
+                                        <div class="col-md-12 message"> <textarea name="message"
+                                                rows="9">Your Message...</textarea> </div>
+                                        <div class="col-md-4 text-center attachment reset-padding"> <label
+                                                for="fileUpload"> <i class="glyphicon glyphicon-paperclip"></i> Attach
+                                                File </label> <input type="file" name="attachment" id="fileUpload">
+                                        </div>
+                                        <div class="col-md-8 attachment-status"> <span>No File Choosen</span> </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <div class="o-content">
-                                <div class="c-intro">
-                                    <div class="o-content__body">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed
-                                            <a href="#" target="_blank">pretium</a>, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Nulla vitae mauris non felis mollis faucibus.
-                                        </p>
-                                        <p>
-                                            Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis.
-                                        </p>
+                                <div class="col-md-4 estimate-container">
+                                    <div class="estimate-img"> <img src="{% static 'img/hire-me-pic.png' %}" alt=""
+                                            class="center-block img-responsive" /> </div>
+                                    <div class="estimate-text">
+                                        <h4>Is An Estimate Required?</h4>
+                                        <div class="radio"> <input type="radio" name="estimate" value="no"
+                                                checked="checked" id="estimateZERO"><label for="estimateZERO">No
+                                                Estimate Required</label> </div>
+                                        <div class="radio"> <input type="radio" name="estimate" value="yes"
+                                                id="estimateONE"><label for="estimateONE">Yes, I require an estimate
+                                                cost of services. I understand I need to allow 2-4 business days to
+                                                receive the estimate.</label> </div><input type="submit"
+                                            value="SEND OFFER" class="submit-btn btn--primary btn-block" />
                                     </div>
                                 </div>
                             </div>
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ########## EXPERTISE ########### -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Expertise
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Batman would be jealous.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <div class="o-grid">
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                01
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>Advanced CSS</h3>
-                                            <p>
-                                                Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                02
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>Front-end Design</h3>
-                                            <p>
-                                                Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                03
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>Ruby on Rails</h3>
-                                            <p>
-                                                Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Vivamus vestibulum nulla cras ornare tristique elit nec ante.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                04
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>Object-oriented PHP</h3>
-                                            <p>
-                                                Morbi in sem quis dui placerat ornare. Ut aliquam sollicitudin leo. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras ante. Vivamus vestibulum nulla nec ante.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                05
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>WordPress</h3>
-                                            <p>
-                                                Phasellus ultrices nulla quis nibh. Fusce lobortis lorem. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, sodales sit amet, nisi.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                06
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>JavaScript / jQuery</h3>
-                                            <p>
-                                                Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                            </div><!-- /o-grid -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ############ SKILLS ############ -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Skills
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Progress bars, anyone?
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <div class="o-grid">
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    80<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>Photoshop</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="80"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    75<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>Illustrator</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="75"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    70<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>Git</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="70"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    65<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>After Effects</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="65"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    90<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>Sketch</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="90"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    50<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>CSS3 Animation</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="50"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    85<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>PageSpeed Insights</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="85"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    95<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>SEO</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="95"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                            </div><!-- /o-grid -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ########## EXPERIENCE ########## -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Experience
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Yes. I&#39;ve been around.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  u-pb-0">
-                            
-                            <div class="a-experience-timeline  c-timeline  t-border-color">
-
-                                <div class="c-timeline__item">
-                                    <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                    <div class="o-content">
-                                        <div class="o-grid">
-                                            <div class="o-grid__col-md-5">
-                                                <div class="c-work__timeframe">
-                                                    2015 &ndash; Present
-                                                </div>
-                                                <h3 class="c-work__heading">
-                                                    Unicorn Incubator Inc.
-                                                </h3>
-                                                <h4 class="c-work__title">
-                                                    Senior Interface Designer
-                                                </h4>
-                                                <div class="c-work__location">
-                                                    Portland, OR
-                                                </div>
-                                            </div>
-                                            <div class="o-grid__col-md-7">
-                                                <p>
-                                                    Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
-                                                </p>
-                                            </div>
-                                        </div><!-- /o-grid -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /c-timeline__item -->
-
-                                <div class="c-timeline__item">
-                                    <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                    <div class="o-content">
-                                        <div class="o-grid">
-                                            <div class="o-grid__col-md-5">
-                                                <div class="c-work__timeframe">
-                                                    2013 &ndash; 2015
-                                                </div>
-                                                <h3 class="c-work__heading">
-                                                    California Design Bureau
-                                                </h3>
-                                                <h4 class="c-work__title">
-                                                    Creative Director
-                                                </h4>
-                                                <div class="c-work__location">
-                                                    Cupertino, CA
-                                                </div>
-                                            </div>
-                                            <div class="o-grid__col-md-7">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-                                                </p>
-                                            </div>
-                                        </div><!-- /o-grid -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /c-timeline__item -->
-
-                                <div class="c-timeline__item">
-                                    <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                    <div class="o-content">
-                                        <div class="o-grid">
-                                            <div class="o-grid__col-md-5">
-                                                <div class="c-work__timeframe">
-                                                    2010 &ndash; 2013
-                                                </div>
-                                                <h3 class="c-work__heading">
-                                                    Dreamland Creative
-                                                </h3>
-                                                <h4 class="c-work__title">
-                                                    Front-end Designer
-                                                </h4>
-                                                <div class="c-work__location">
-                                                    New York, NY
-                                                </div>
-                                            </div>
-                                            <div class="o-grid__col-md-7">
-                                                <p>
-                                                    Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.
-                                                </p>
-                                            </div>
-                                        </div><!-- /o-grid -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /c-timeline__item -->
-
-                            </div><!-- /c-timeline -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ########### EDUCATION ########## -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Education
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Lazy isn&#39;t in my vocabulary.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  u-pt-0">
-                            
-                            <div class="o-content">
-                                <div class="a-education-timeline  c-timeline  t-border-color  o-section__full-top-space">
-                                    <div class="c-timeline__end  t-border-color"></div>
-
-                                    <div class="c-timeline__item">
-                                        <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                        <div class="o-content">
-                                            <div class="o-grid">
-                                                <div class="o-grid__col-md-5">
-                                                    <div class="c-work__timeframe">
-                                                        2008 &ndash; 2010
-                                                    </div>
-                                                    <h3 class="c-work__heading">
-                                                        Webster Tech University
-                                                    </h3>
-                                                    <h4 class="c-work__title">
-                                                        Master of Computer Science
-                                                    </h4>
-                                                    <div class="c-work__location">
-                                                        Miami, FL
-                                                    </div>
-                                                </div>
-                                                <div class="o-grid__col-md-7">
-                                                    <p>
-                                                        Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-grid -->
-                                        </div><!-- /o-content -->
-                                    </div><!-- /c-timeline__item -->
-
-                                    <div class="c-timeline__item">
-                                        <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                        <div class="o-content">
-                                            <div class="o-grid">
-                                                <div class="o-grid__col-md-5">
-                                                    <div class="c-work__timeframe">
-                                                        2003 &ndash; 2008
-                                                    </div>
-                                                    <h3 class="c-work__heading">
-                                                        Ninsei University
-                                                    </h3>
-                                                    <h4 class="c-work__title">
-                                                        Bachelor of Computer Science
-                                                    </h4>
-                                                    <div class="c-work__location">
-                                                        Tokyo, Japan
-                                                    </div>
-                                                </div>
-                                                <div class="o-grid__col-md-7">
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-grid -->
-                                        </div><!-- /o-content -->
-                                    </div><!-- /c-timeline__item -->
-
-                                    <div class="c-timeline__item">
-                                        <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                        <div class="o-content">
-                                            <div class="o-grid">
-                                                <div class="o-grid__col-md-5">
-                                                    <div class="c-work__timeframe">
-                                                        2000 &ndash; 2003
-                                                    </div>
-                                                    <h3 class="c-work__heading">
-                                                        Academy of Fine Arts
-                                                    </h3>
-                                                    <h4 class="c-work__title">
-                                                        Master of Arts
-                                                    </h4>
-                                                    <div class="c-work__location">
-                                                        Berlin, Germany
-                                                    </div>
-                                                </div>
-                                                <div class="o-grid__col-md-7">
-                                                    <p>
-                                                        Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-grid -->
-                                        </div><!-- /o-content -->
-                                    </div><!-- /c-timeline__item -->
-
-                                </div><!-- /c-timeline -->
-                            </div><!-- /o-content -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ########### PROFILES ########### -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Profiles
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Busy as usual.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <div class="o-grid">
-
-                                <div class="o-grid__col-xl-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <a href="http://themeforest.net/user/ruventhemes/portfolio" target="_blank" class="t-link-container">
-                                            <div class="o-media  o-media--block">
-                                                <div class="o-media__figure">
-                                                    <div class="c-profile__icon">
-                                                        <i class="fab  fa-lg  fa-envira"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="o-media__body  o-content__body">
-                                                    <h3 class="t-link-container__item">
-                                                        Themeforest
-                                                    </h3>
-                                                    <p>
-                                                        An overview of the themes and templates that I sell.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-media -->
-                                        </a><!-- /t-link-container -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-xl-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <a href="https://github.com/hatra-e/" target="_blank" class="t-link-container">
-                                            <div class="o-media  o-media--block">
-                                                <div class="o-media__figure">
-                                                    <div class="c-profile__icon">
-                                                        <i class="fab  fa-lg  fa-github-alt"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="o-media__body  o-content__body">
-                                                    <h3 class="t-link-container__item">
-                                                        GitHub
-                                                    </h3>
-                                                    <p>
-                                                        All my open source projects for you analyze.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-media -->
-                                        </a><!-- /t-link-container -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-xl-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <a href="http://wordpress.com" target="_blank" class="t-link-container">
-                                            <div class="o-media  o-media--block">
-                                                <div class="o-media__figure">
-                                                    <div class="c-profile__icon">
-                                                        <i class="fab  fa-lg  fa-medium"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="o-media__body  o-content__body">
-                                                    <h3 class="t-link-container__item">
-                                                        Medium
-                                                    </h3>
-                                                    <p>
-                                                        Yes. I'm also a blogger and here you find my writings.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-media -->
-                                        </a><!-- /t-link-container -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-xl-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <a href="https://dribbble.com" target="_blank" class="t-link-container">
-                                            <div class="o-media  o-media--block">
-                                                <div class="o-media__figure">
-                                                    <div class="c-profile__icon">
-                                                        <i class="fab  fa-lg  fa-dribbble"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="o-media__body  o-content__body">
-                                                    <h3 class="t-link-container__item">
-                                                        Dribbble
-                                                    </h3>
-                                                    <p>
-                                                        Whenever a design is finalized, it lands right here.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-media -->
-                                        </a><!-- /t-link-container -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-xl-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <a href="https://www.flickr.com" target="_blank" class="t-link-container">
-                                            <div class="o-media  o-media--block">
-                                                <div class="o-media__figure">
-                                                    <div class="c-profile__icon">
-                                                        <i class="fab  fa-lg  fa-flickr"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="o-media__body  o-content__body">
-                                                    <h3 class="t-link-container__item">
-                                                        Flickr
-                                                    </h3>
-                                                    <p>
-                                                        A selection of photos I shot throughout the years.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-media -->
-                                        </a><!-- /t-link-container -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-xl-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <a href="http://www.deviantart.com" target="_blank" class="t-link-container">
-                                            <div class="o-media  o-media--block">
-                                                <div class="o-media__figure">
-                                                    <div class="c-profile__icon">
-                                                        <i class="fab  fa-lg  fa-deviantart"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="o-media__body  o-content__body">
-                                                    <h3 class="t-link-container__item">
-                                                        DeviantArt
-                                                    </h3>
-                                                    <p>
-                                                        A place for my sketches and drawings.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-media -->
-                                        </a><!-- /t-link-container -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                            </div><!-- /o-grid -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ############ HEADER ############ -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Awards
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Happy times!
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <div class="o-grid">
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h3>Unicorn Developer Award 2016</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, justo eget porttitor mauris sit amet felis. Neque id cursus faucibus.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h3>Website of the Year Award 2015</h3>
-                                            <p>
-                                                Praesent dapibus dolor sit amet, justo eget porttitor mauris sit amet. Neque id cursus faucibus.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h3>1st Place at CSShacker Conference</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, justo eget porttitor mauris sit amet felis. Neque id cursus faucibus.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                            </div><!-- /o-grid -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ########### PORTFOLIO ########## -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Portfolio
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Here it gets interesting.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  o-section__full-bottom-space">
-                            
-                            <div class="o-grid  o-grid--gallery">
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="{% static 'portfolio/1_full' %}" data-lightbox-hidpi="" title="Musée du Louvre" data-lightbox-gallery="portfolio">
-                                        <img src="{% static 'portfolio/1_thumb.jpg' %}" alt="">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Musée du Louvre
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                            <p>
-                                                Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="{% static 'portfolio/2_full' %}" data-lightbox-hidpi="" title="Tunnel Effect" data-lightbox-gallery="portfolio">
-                                        <img src="{% static 'portfolio/2_thumb.jpg' %}" alt="">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Tunnel Effect
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                            <p>
-                                                Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="{% static 'portfolio/3_full' %}" data-lightbox-hidpi="" title="New York, New York" data-lightbox-gallery="portfolio">
-                                        <img src="{% static 'portfolio/3_thumb' %}" alt="">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                New York, New York
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                            <p>
-                                                Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="{% static 'portfolio/4_full' %}" data-lightbox-hidpi="" title="Sky High" data-lightbox-gallery="portfolio">
-                                        <img src="{% static 'portfolio/4_thumb' %}" alt="">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Sky High
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                            <p>
-                                                Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="{% static 'portfolio/5_full' %}" data-lightbox-hidpi="" title="The Eiffel Tower" data-lightbox-gallery="portfolio">
-                                        <img src="{% static 'portfolio/5_thumb' %}" alt="">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                The Eiffel Tower
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                            <p>
-                                                Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="{% static 'portfolio/6_full' %}" data-lightbox-hidpi="" title="Reaching the Clouds" data-lightbox-gallery="portfolio">
-                                        <img src="{% static 'portfolio/6_thumb' %}" alt="">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Reaching the Clouds
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                            <p>
-                                                Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                            </div><!-- /o-grid -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ############ CLIENTS ########### -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Clients
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Happy people.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <ul class="c-clients  o-content">
-                                <li>
-                                    <a href="http://example.com" target="_blank">
-                                        <img src="{% static 'clients/bbc.png' %}" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://example.com" target="_blank">
-                                        <img src="{% static 'clients/disney.png' %}" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://example.com" target="_blank">
-                                        <img src="{% static 'clients/github.png' %}" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://example.com" target="_blank">
-                                        <img src="{% static 'clients/google.png' %}" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://example.com" target="_blank">
-                                        <img src="{% static 'clients/html5.png' %}" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://example.com" target="_blank">
-                                        <img src="{% static 'clients/kickstarter.png' %}" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://example.com" target="_blank">
-                                        <img src="{% static 'clients/youtube.png' %}" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://example.com" target="_blank">
-                                        <img src="{% static 'clients/vimeo.png' %}" alt="">
-                                    </a>
-                                </li>
-                            </ul><!-- /o-float-box -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ############ FOOTER ############ -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  o-section--footer">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Contact
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Call me, maybe.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                                <div class="c-footer__contact">
-                                    <div class="o-grid">
-
-                                    <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                        <div class="o-content">
-                                            <div class="o-content__body">
-                                                <h4>Location</h4>
-                                                <address>
-                                                    Portland, OR
-                                                </address>
-                                            </div>
-                                        </div><!-- /o-content -->
-                                    </div><!-- /o-grid__col -->
-
-                                    <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                        <div class="o-content">
-                                            <div class="o-content__body">
-                                                <h4>Phone</h4>
-                                                <p>
-                                                    534.456.886
-                                                </p>
-                                            </div>
-                                        </div><!-- /o-content -->
-                                    </div><!-- /o-grid__col -->
-
-                                    <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                        <div class="o-content">
-                                            <div class="o-content__body">
-                                                <a href="#" target="_blank" class="t-link-container">
-                                                    <h4>Web</h4>
-                                                    <p>
-                                                        <span class="t-link-container__item--blended">
-                                                            ruventhemes.com
-                                                        </span>
-                                                    </p>
-                                                </a><!-- /o-link-container -->
-                                            </div>
-                                        </div><!-- /o-content -->
-                                    </div><!-- /o-grid__col -->
-
-                                    <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                        <div class="o-content">
-                                            <div class="o-content__body">
-                                                <a href="#" target="_blank" class="t-link-container">
-                                                    <h4>Email</h4>
-                                                    <p>
-                                                        <span class="t-link-container__item--blended">
-                                                            hello@example.com
-                                                        </span>
-                                                    </p>
-                                                </a><!-- /o-link-container -->
-                                            </div>
-                                        </div><!-- /o-content -->
-                                    </div><!-- /o-grid__col -->
-
-                                </div><!-- /o-grid -->
-                                </div><!-- /c-footer__contact -->
-
-                                <hr class="c-footer__contact-divider" />
-
-                                <div class="o-content">
-                                    <div class="c-footer__bottom">
-                                        <div class="c-footer__brand">
-
-                                            <div class="c-brand">
-                                                <div class="o-content__body">
-                                                    <h1 class="c-brand__title  t-title">
-                                                        <span class="c-brand__sizer  c-brand__sizer--sm">
-                                                            <span class="a-footer  c-brand__first-word  t-title__first-word">
-                                                                Desmond
-                                                            </span>
-                                                            <span class="a-footer  c-brand__second-word  t-title__second-word">
-                                                                Rambowski
-                                                            </span>
-                                                        </span>
-                                                    </h1>
-                                                </div><!-- /o-content__body -->
-                                            </div><!-- /c-brand -->
-
-                                        </div><!-- /c-footer__brand -->
-
-                                        <ul class="c-footer__social-buttons  c-social-buttons  o-content__body">
-                                            <li class="a-footer">
-                                                <a href="https://www.facebook.com/RuvenThemes/" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="a-footer">
-                                                <a href="https://dribbble.com/" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-dribbble"></i>
-                                                </a>
-                                            </li>
-                                            <li class="a-footer">
-                                                <a href="https://twitter.com/_Ruven" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                        </ul><!-- /c-footer__social-buttons -->
-
-                                    </div><!-- /c-footer__bottom -->
-                                </div><!-- /o-content -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-        </div><!-- /c-main-container -->
-
-    </body>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/isotope-docs.min.js' %}"></script>
+    <script src="{% static 'js/jquery.form.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK9f7sXWmqQ1E-ufRXV3VpXOn_ifKsDuc"></script>
+    <script src="{% static 'js/gmaps.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/animatescroll.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
+    <script src="{% static 'js/parallax.min.js' %}"></script>
+    <script src="{% static 'js/retina.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
 
 </html>
